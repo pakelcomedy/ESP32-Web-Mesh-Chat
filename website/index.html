@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ESP32 Mesh Chat</title>
+  <!-- Google Font for clean typography -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- Core styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="chat-container">
+    <header class="chat-header">
+      <h1>Mesh Chat</h1>
+      <p>Offline P2P via ESP‑NOW</p>
+    </header>
+
+    <main class="chat-main" id="chatWindow" aria-live="polite" role="log">
+      <!-- Chat bubbles injected here -->
+      <!--
+      <div class="message message--received">
+        <div class="message__meta">
+          <span class="message__sender">AA:BB:CC</span>
+          <time class="message__time">12:34</time>
+        </div>
+        <div class="message__text">Hello from peer!</div>
+      </div>
+      -->
+    </main>
+
+    <form class="chat-form" id="chatForm" aria-label="Send a message">
+      <div class="chat-inputs">
+        <input 
+          type="text" 
+          id="senderInput" 
+          class="chat-input chat-input--name" 
+          placeholder="Your name" 
+          maxlength="12" 
+          required 
+          aria-required="true"
+        />
+        <input 
+          type="text" 
+          id="messageInput" 
+          class="chat-input chat-input--message" 
+          placeholder="Type a message…" 
+          maxlength="50" 
+          required 
+          aria-required="true"
+          autocomplete="off"
+        />
+      </div>
+      <button type="submit" class="chat-button" id="sendBtn" aria-label="Send message">
+        Send
+      </button>
+    </form>
+  </div>
+
+  <!-- Chat logic -->
+  <script src="script.js"></script>
+</body>
+</html>

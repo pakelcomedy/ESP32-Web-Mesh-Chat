@@ -1,0 +1,23 @@
+[package]
+name = "esp32-mesh-chat"
+version = "0.1.0"
+authors = ["YourName <you@example.com>"]
+edition = "2021"
+
+[dependencies]
+esp-idf-sys = { version = "0.34", features = ["binstart"] }
+esp-idf-hal = "0.42"
+esp-idf-svc = "0.47"
+log = "0.4"
+anyhow = "1.0"
+once_cell = "1.17"
+
+[profile.dev]
+opt-level = 1
+debug = true
+lto = false
+
+[profile.release]
+opt-level = 3
+debug = false
+lto = true
