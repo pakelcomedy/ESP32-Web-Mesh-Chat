@@ -15,3 +15,15 @@ ESP32-Web-Mesh-Chat/
     ├── style.css
     └── script.js        # AJAX POST/GET message
 ```
+```
++-------------+      ESP-NOW      +-------------+
+|   ESP32 A   | <---------------> |   ESP32 B   |
+|  WebServer  |                   |  WebServer  |
++-------------+                   +-------------+
+       ^                                 ^
+       | Wi-Fi AP                        | USB Serial
+       |                                 |
++------------+                   +------------+
+|   Browser  |                   |   Browser  |
++------------+                   +------------+
+```
